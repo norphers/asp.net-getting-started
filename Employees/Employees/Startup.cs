@@ -39,6 +39,11 @@ namespace Employees
                 app.UseDeveloperExceptionPage();
             }
 
+            // Habilita la asignación de archivos predeterminada.
+            app.UseDefaultFiles();
+            // Atiende archivos estáticos.
+            app.UseStaticFiles();
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
