@@ -11,12 +11,40 @@
 
 <body>
     <h1>Employee Crud</h1>
-    <h3>Add</h3>
-    <form action="javascript:void(0);" method="POST" onsubmit="addEmployee()">
-        <input type="text" id="add-employee" placeholder="New employee">
-        <input type="submit" value="Add">
-    </form>
 
+    <div class="container-fluid">
+        <h3>Add new employee</h3>
+
+        <form action="javascript:void(0);" method="POST" onsubmit="addEmployee()">
+            <div class="form-row">
+                <div class="col md-6">
+                    <input type="text" class="form-control" id="first-name" placeholder="First name">
+                </div>
+                <div class="col md-6">
+                    <input type="text" class="form-control" id="last-name" placeholder="Last name">
+                </div>
+            </div>
+            <br><!-- edit in CSS -->
+            <div class="form-row">
+                <div class="col md-6">
+                    <input type="text" class="form-control" id="post" placeholder="Position">
+                </div>
+                <div class="col md-6">
+                    <input type="text" class="form-control" id="salary" placeholder="Salary">
+                </div>
+            </div>
+            <br><!-- edit in CSS -->
+            <input type="submit" value="Add">
+        </form>    
+
+    </div>
+    
+    
+    
+
+  
+
+    <!--
     <div id="editForm">
         <h3>Edit</h3>
         <form action="javascript:void(0);" onsubmit="updateEmployee()">
@@ -39,6 +67,7 @@
         </tr>
         <tbody id="todos"></tbody>
     </table>
+    -->
 
     <!-- Bootstrap scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -47,6 +76,7 @@
     
     <!-- javascript -->
     <script src="js/site.js" asp-append-version="true"></script>
-    <script type="text/javascript">getItems();</script>
+    <script type="text/javascript">getEmployees();</script>
+    
 </body>
 </html>

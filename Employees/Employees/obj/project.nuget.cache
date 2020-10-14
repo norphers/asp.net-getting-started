@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IrMmbbfLEllmjLSgrjByqlrv44b9FKiIYPmyrBDgVbrL0Cla7kpfjA6U4s9zcUBOfNAE+glMAq6Gh5wIpm3OrQ==",
+  "dgSpecHash": "tcjt6VISl7fALk0bJ9i2Qpmyd1K3OMJ3sfBEQf/pkDsJWpjlUMuw6NyUZscI82z7li4LnQUu7rK6eOFM3cgfGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\server\\Employees\\Employees.csproj",
+  "projectFilePath": "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\Employees\\Employees.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ocana\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\ocana\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

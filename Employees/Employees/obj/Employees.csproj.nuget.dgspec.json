@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\server\\Employees\\Employees.csproj": {}
+    "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\Employees\\Employees.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\server\\Employees\\Employees.csproj": {
+    "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\Employees\\Employees.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\server\\Employees\\Employees.csproj",
+        "projectUniqueName": "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\Employees\\Employees.csproj",
         "projectName": "Employees",
-        "projectPath": "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\server\\Employees\\Employees.csproj",
+        "projectPath": "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\Employees\\Employees.csproj",
         "packagesPath": "C:\\Users\\ocana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\server\\Employees\\obj\\",
+        "outputPath": "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\Employees\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ocana\\AppData\\Roaming\\NuGet\\NuGet.Config",
