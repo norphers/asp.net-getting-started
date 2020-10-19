@@ -1,16 +1,9 @@
 const uri = 'https://localhost:44319/api/Employees';
 let employees = [];
 
-
-function getEmployees() {
-  fetch(uri)
-    .then(response => response.json())
-    .then(data => console.log(data)) //_displayEmployee(data))
-    .catch(error => console.error('Unable to get employees.', error));
-}
-
-
-function addEmployee() {
+function addEmployee() 
+{
+  //create employee
   const firstName = document.getElementById('first-name');
   const lastName = document.getElementById('last-name');
   const post = document.getElementById('post');
@@ -23,8 +16,7 @@ function addEmployee() {
     salary: salary.value.trim(),
   };
 
-  console.log(employee);
-
+  //send json
   fetch(uri, {
     method: 'POST',
     headers: {
@@ -34,7 +26,6 @@ function addEmployee() {
     body: JSON.stringify(employee)
   })
     .then(response => response.json())
-    /*
     .then(() => {
       getEmployees();
       addFirstNameTextbox.value = '';
@@ -42,9 +33,77 @@ function addEmployee() {
       addPostTextbox.value = '';
       addSalaryTextbox.value = '';
     })
-    */
     .catch(error => console.error('Unable to add employee.', error));
+
+    getEmployees();
 }
+
+function getEmployees() {
+  fetch(uri)
+    .then(response => response.json())
+    .then(data => generateEmployeeTable(data))
+    .catch(error => console.error('Unable to get employees.', error));
+}
+
+
+function generateEmployeeTable(employees)
+{
+    let employeeTable = document.getElementById("employee-table");
+    let tr = employeeTable.insertRow();
+    for(let employee of employees)
+    {
+      let td = tr.insertCell();
+      let textNode = document.createTextNode();
+      td1.appendChild(textNode);
+    }
+}
+
+/*
+function _displayEmployees(data) {
+  const tBody = document.getElementById('employee-table');
+  tBody.innerHTML = '';
+
+  data.forEach(employee => {
+    let tr = tBody.insertRow();
+    
+    let td1 = tr.insertCell(0);
+    let textNode1 = document.createTextNode(employee.firstName);
+    td1.appendChild(textNode1);
+
+    let td2 = tr.insertCell(1);
+    let textNode2 = document.createTextNode(employee.lastName);
+    td2.appendChild(textNode2);
+
+    let td3 = tr.insertCell(1);
+    let textNode3 = document.createTextNode(employee.post);
+    td3.appendChild(textNode3);
+  });
+
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //-----------------------------------------------------------------------
