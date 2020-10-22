@@ -1,9 +1,18 @@
 const uri = 'https://localhost:44319/api/Employees';
+
 let employees = [];
 
+//get empoloyees
+function getEmployees() {
+  fetch(uri)
+    .then(response => response.json())
+    .then(data => _diplayEmployees(data))
+    .catch(error => console.error('Unable to get employees.', error));
+}
+
+//add employee
 function addEmployee() 
 {
-  //create employee
   const firstName = document.getElementById('first-name');
   const lastName = document.getElementById('last-name');
   const post = document.getElementById('post');
@@ -16,7 +25,6 @@ function addEmployee()
     salary: salary.value.trim(),
   };
 
-  //send json
   fetch(uri, {
     method: 'POST',
     headers: {
@@ -34,31 +42,37 @@ function addEmployee()
       addSalaryTextbox.value = '';
     })
     .catch(error => console.error('Unable to add employee.', error));
-
-    getEmployees();
 }
 
-function getEmployees() {
-  fetch(uri)
-    .then(response => response.json())
-    .then(data => generateEmployeeTable(data))
-    .catch(error => console.error('Unable to get employees.', error));
+//delete employee
+function deleteEmployee(id) {
+  fetch(`${uri}/${id}`, {
+    method: 'DELETE'
+  })
+  .then(() => getEmployees())
+  .catch(error => console.error('Unable to delete employee.', error));
 }
 
 
-function generateEmployeeTable(employees)
-{
-    let employeeTable = document.getElementById("employee-table");
-    let tr = employeeTable.insertRow();
-    for(let employee of employees)
-    {
-      let td = tr.insertCell();
-      let textNode = document.createTextNode();
-      td1.appendChild(textNode);
-    }
-}
+//https://docs.microsoft.com/es-es/aspnet/core/tutorials/web-api-javascript?view=aspnetcore-3.1
 
-/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function _displayEmployees(data) {
   const tBody = document.getElementById('employee-table');
   tBody.innerHTML = '';
@@ -80,7 +94,6 @@ function _displayEmployees(data) {
   });
 
 }
-*/
 
 
 
