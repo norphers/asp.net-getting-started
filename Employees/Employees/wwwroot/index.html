@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="">
+    <title>Employee CRUD</title>
+    <!-- CSS -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" >
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+</head>
+
+<body>
+
+    <header class="header">
+            <h1>Employee CRUD</h1>
+    </header>
+
+    <div class="container main-container" id="main-container">
+
+
+        <div class="employee-container" id="employee-container">
+            <div id="title">
+                <h3>Register</h3>
+            </div>
+            <form action="javascript:void(0);" method="POST" onsubmit="addEmployee()" id="employee-form">
+                <div class="form-row">
+                    <div class="col">
+                        <label for="inputFirstName">First Name</label>
+                        <input type="text" class="form-control" id="inputFirstName">
+                        <div class="invalid-feedback" id="errorFirstName"></div>
+                    </div>
+                    <div class="col">
+                        <label for="inputLastName">Last Name</label>
+                        <input type="text" class="form-control" id="inputLastName"> 
+                        <div class="invalid-feedback" id="errorLastName"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="inputPosition">Position</label>
+                        <input type="text" class="form-control" id="inputPosition"> 
+                        <div class="invalid-feedback" id="errorPosition"></div>
+                    </div>
+                    <div class="col">
+                        <label for="inputSalary">Salary</label>
+                        <input type="text" class="form-control" id="inputSalary"> 
+                        <div class="invalid-feedback" id="errorSalary"></div>
+                    </div>
+                </div>
+                <div class="form-button">
+                   <button class="btn btn-primary" type="submit" id="employeeFormButton">Submit</button> 
+               </div>
+            </form>
+        </div>
+
+
+        <div class="edit-employee-container" id="edit-employee-container">
+            <div id="title">
+                <h3>Edit</h3>
+            </div>
+            <form action="javascript:void(0);" onsubmit="updateEmployee()">
+                <div class="form-row">
+                    <div class="col">
+                        <label for="editID">ID</label>
+                        <input type="text" class="form-control" id="editId">
+                    </div>
+                    <div class="col">
+                        <label for="editFirstName">First Name</label>
+                        <input type="text" class="form-control" id="editFirstName">
+                        <div class="invalid-feedback" id="errorFirstName"></div>
+                    </div>
+                    <div class="col">
+                        <label for="editLastName">Last Name</label>
+                        <input type="text" class="form-control" id="editLastName"> 
+                        <div class="invalid-feedback" id="errorLastName"></div>
+                    </div>
+                    <div class="col">
+                        <label for="editPosition">Position</label>
+                        <input type="text" class="form-control" id="editPosition"> 
+                        <div class="invalid-feedback" id="errorPosition"></div>
+                    </div>
+                </div>
+                <div class="form-button">
+                    <button class="btn btn-primary" type="submit" id="employeeFormButton">Save</button> 
+                </div>
+            </form>
+
+        </div>
+
+
+        <div class="employee-display-container" id="employee-display-container">
+            <div id="title">
+                <h3>Employee List</h3>
+            </div>
+            <table class="table" id="employee-table"></table>
+        </div>
+    
+        
+    </div>
+
+    <!-- Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <!-- JavaScript -->
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript"> getEmployees();</script>
+
+</body>
+</html>

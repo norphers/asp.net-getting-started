@@ -1,0 +1,29 @@
+body {
+    font-size: 1.3rem;
+}
+
+header {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 2rem;
+}
+
+.employee-container {
+    margin-top: 2rem;
+}
+
+.form-row {
+    margin-bottom: 1rem;
+}
+
+.employee-display-container {
+    margin-top: 2rem;
+}
+
+.form-button {
+    margin-top: 2rem;
+    text-align: center;
+}
