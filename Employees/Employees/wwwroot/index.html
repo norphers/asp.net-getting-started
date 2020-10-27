@@ -16,8 +16,8 @@
             <h1>Employee CRUD</h1>
     </header>
 
-    <!-- Create employee -->
     <div class="container main-container" id="main-container">
+
 
         <div class="employee-container" id="employee-container">
             <div id="title">
@@ -54,6 +54,41 @@
             </form>
         </div>
 
+
+        <div class="edit-employee-container" id="edit-employee-container">
+            <div id="title">
+                <h3>Edit</h3>
+            </div>
+            <form action="javascript:void(0);" onsubmit="updateEmployee()">
+                <div class="form-row">
+                    <div class="col">
+                        <label for="editID">ID</label>
+                        <input type="text" class="form-control" id="editId">
+                    </div>
+                    <div class="col">
+                        <label for="editFirstName">First Name</label>
+                        <input type="text" class="form-control" id="editFirstName">
+                        <div class="invalid-feedback" id="errorFirstName"></div>
+                    </div>
+                    <div class="col">
+                        <label for="editLastName">Last Name</label>
+                        <input type="text" class="form-control" id="editLastName"> 
+                        <div class="invalid-feedback" id="errorLastName"></div>
+                    </div>
+                    <div class="col">
+                        <label for="editPosition">Position</label>
+                        <input type="text" class="form-control" id="editPosition"> 
+                        <div class="invalid-feedback" id="errorPosition"></div>
+                    </div>
+                </div>
+                <div class="form-button">
+                    <button class="btn btn-primary" type="submit" id="employeeFormButton">Save</button> 
+                </div>
+            </form>
+
+        </div>
+
+
         <div class="employee-display-container" id="employee-display-container">
             <div id="title">
                 <h3>Employee List</h3>
@@ -61,61 +96,17 @@
             <table class="table" id="employee-table"></table>
         </div>
     
+        
     </div>
-
-
-    <!--
-    <h1>To-do CRUD</h1>
-    <h3>Add</h3>
-    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
-        <input type="text" id="add-name" placeholder="New to-do">
-        <input type="submit" value="Add">
-    </form>
-
-    <div id="editForm">
-        <h3>Edit</h3>
-        <form action="javascript:void(0);" onsubmit="updateItem()">
-            <input type="hidden" id="edit-id">
-            <input type="checkbox" id="edit-isComplete">
-            <input type="text" id="edit-name">
-            <input type="submit" value="Save">
-            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
-        </form>
-    </div>
-
-    <p id="counter"></p>
-
-    <table>
-        <tr>
-            <th>Is Complete?</th>
-            <th>Name</th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tbody id="todos"></tbody>
-    </table>
-
-    <script src="js/site.js" asp-append-version="true"></script>
-    <script type="text/javascript">
-        getItems();
-    </script>
-    -->
-
-
-
-
 
     <!-- Bootstrap scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     
-    <!-- javascript -->
+    <!-- JavaScript -->
     <script src="js/site.js" asp-append-version="true"></script>
-    
-    <script type="text/javascript">
-        getEmployees();
-    </script>
+    <script type="text/javascript"> getEmployees();</script>
 
 </body>
 </html>
