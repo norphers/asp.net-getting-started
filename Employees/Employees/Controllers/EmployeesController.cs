@@ -130,7 +130,7 @@ namespace Employees.Controllers
             Id = employee.Id,
             FirstName = employee.FirstName,
             LastName = employee.LastName,
-            Post = employee.Post
+            Position = employee.Position
         };
 
     }

@@ -3,52 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="">
-    <title>Employee App</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <title>Employee CRUD</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css" >
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
 </head>
 
 <body>
-    <h1>Employee Crud</h1>
 
-    <div class="container-fluid">
-        <h3>Add new employee</h3>
+    <header class="header">
+            <h1>Employee CRUD</h1>
+    </header>
 
-        <form action="javascript:void(0);" method="POST" onsubmit="addEmployee()">
-            <div class="form-row">
-                <div class="col md-6">
-                    <input type="text" class="form-control" id="first-name" placeholder="First name">
-                </div>
-                <div class="col md-6">
-                    <input type="text" class="form-control" id="last-name" placeholder="Last name">
-                </div>
+    <!-- Create employee -->
+    <div class="container main-container" id="main-container">
+
+        <div class="employee-container" id="employee-container">
+            <div id="title">
+                <h3>Register</h3>
             </div>
-            <br><!-- edit in CSS -->
-            <div class="form-row">
-                <div class="col md-6">
-                    <input type="text" class="form-control" id="post" placeholder="Position">
+            <form action="javascript:void(0);" method="POST" onsubmit="addEmployee()" id="employee-form">
+                <div class="form-row">
+                    <div class="col">
+                        <label for="inputFirstName">First Name</label>
+                        <input type="text" class="form-control" id="inputFirstName">
+                        <div class="invalid-feedback" id="errorFirstName"></div>
+                    </div>
+                    <div class="col">
+                        <label for="inputLastName">Last Name</label>
+                        <input type="text" class="form-control" id="inputLastName"> 
+                        <div class="invalid-feedback" id="errorLastName"></div>
+                    </div>
                 </div>
-                <div class="col md-6">
-                    <input type="text" class="form-control" id="salary" placeholder="Salary">
+                <div class="form-row">
+                    <div class="col">
+                        <label for="inputPosition">Position</label>
+                        <input type="text" class="form-control" id="inputPosition"> 
+                        <div class="invalid-feedback" id="errorPosition"></div>
+                    </div>
+                    <div class="col">
+                        <label for="inputSalary">Salary</label>
+                        <input type="text" class="form-control" id="inputSalary"> 
+                        <div class="invalid-feedback" id="errorSalary"></div>
+                    </div>
                 </div>
-            </div>
-            <br><!-- edit in CSS -->
-            <input type="submit" value="Add">
-        </form>    
+                <div class="form-button">
+                   <button class="btn btn-primary" type="submit" id="employeeFormButton">Submit</button> 
+               </div>
+            </form>
+        </div>
 
+        <div class="employee-display-container" id="employee-display-container">
+            <div id="title">
+                <h3>Employee List</h3>
+            </div>
+            <table class="table" id="employee-table"></table>
+        </div>
+    
     </div>
-    
-    
-    
 
-  
 
     <!--
+    <h1>To-do CRUD</h1>
+    <h3>Add</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+        <input type="text" id="add-name" placeholder="New to-do">
+        <input type="submit" value="Add">
+    </form>
+
     <div id="editForm">
         <h3>Edit</h3>
-        <form action="javascript:void(0);" onsubmit="updateEmployee()">
+        <form action="javascript:void(0);" onsubmit="updateItem()">
             <input type="hidden" id="edit-id">
             <input type="checkbox" id="edit-isComplete">
             <input type="text" id="edit-name">
@@ -68,12 +94,16 @@
         </tr>
         <tbody id="todos"></tbody>
     </table>
+
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getItems();
+    </script>
     -->
 
-    <!-- Employee Data Table Container -->
-    <div class="container employee-display-container">
-        <table class="table table-bordered" id="employee-table"></table>
-    </div>
+
+
+
 
     <!-- Bootstrap scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -82,7 +112,10 @@
     
     <!-- javascript -->
     <script src="js/site.js" asp-append-version="true"></script>
-    <script type="text/javascript">getEmployees();</script>
     
+    <script type="text/javascript">
+        getEmployees();
+    </script>
+
 </body>
 </html>
