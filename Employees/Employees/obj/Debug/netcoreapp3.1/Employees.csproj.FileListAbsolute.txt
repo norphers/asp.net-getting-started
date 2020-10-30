@@ -461,3 +461,7 @@ C:\Users\ocana\Documents\Web Developement\asp.net-getting-started\Employees\Empl
 C:\Users\ocana\Documents\Web Developement\asp.net-getting-started\Employees\Employees\obj\Debug\netcoreapp3.1\Employees.dll
 C:\Users\ocana\Documents\Web Developement\asp.net-getting-started\Employees\Employees\obj\Debug\netcoreapp3.1\Employees.pdb
 C:\Users\ocana\Documents\Web Developement\asp.net-getting-started\Employees\Employees\obj\Debug\netcoreapp3.1\Employees.genruntimeconfig.cache
+C:\Users\ocana\Documents\Web Developement\asp.net-getting-started\Employees\Employees\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\ocana\Documents\Web Developement\asp.net-getting-started\Employees\Employees\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\Users\ocana\Documents\Web Developement\asp.net-getting-started\Employees\Employees\obj\Debug\netcoreapp3.1\Employees.csproj.CoreCompileInputs.cache
+C:\Users\ocana\Documents\Web Developement\asp.net-getting-started\Employees\Employees\obj\Debug\netcoreapp3.1\Employees.MvcApplicationPartsAssemblyInfo.cache
