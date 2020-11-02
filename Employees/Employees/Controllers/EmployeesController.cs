@@ -20,7 +20,24 @@ namespace Employees.Controllers
         {
             _context = context;
         }
- 
+
+        /*
+        // Introduction Hello World!
+        [HttpGet]
+        public string GetHelloWorld()
+        {
+            var message = "Hello World!";
+            return message;
+        }
+
+        [HttpGet("{name}")]
+        public string GetEmployee(string name)
+        {
+            var message = $"Hello {name}!";
+            return message;
+        }
+        */
+
         // GET: api/Employees
         [HttpGet]
         public async Task<ActionResult<IEnumerable<EmployeeDTO>>> GetEmployees()
@@ -28,6 +45,7 @@ namespace Employees.Controllers
             return await _context.Employees.Select(x => EmployeeToDTO(x)).ToListAsync();
         }
 
+        
         // GET: api/Employees/5
         [HttpGet("{id}")]
         public async Task<ActionResult<EmployeeDTO>> GetEmployee(long id)
