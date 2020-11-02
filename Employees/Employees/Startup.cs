@@ -27,18 +27,27 @@ namespace Employees
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //conexión con el context que es el que controla la conexión a la base de datos y la asignación
-            //de objetos 'Employee'a los registros de la base de datos.
-            services.AddDbContext<EmployeeContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("EmployeeContext")));
+            /*
+            Conexión con el context que es el que controla la conexión a la base de datos y la asignación
+            de objetos 'Employee'a los registros de la base de datos. 
+            */
 
+            //MySQL
+            //services.Add(new ServiceDescriptor(typeof(EmployeeContext), new EmployeeContext(Configuration.GetConnectionString("DefaultConnection"))));
+
+            //SQL Server       
+            services.AddDbContext<EmployeeContext>(options => options.UseSqlServer(Configuration.GetConnectionString("EmployeeContext")));
+
+            //InMemory Database
             //services.AddDbContext<EmployeeContext>(opt => opt.UseInMemoryDatabase("EmployeeList"));
+            
             services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
