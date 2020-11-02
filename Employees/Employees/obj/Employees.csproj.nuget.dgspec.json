@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\Employees\\Employees.csproj": {}
+    "C:\\Users\\ocana\\Documents\\Web Developement\\asp.net-getting-started\\Employees\\Employees\\Employees.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\Employees\\Employees.csproj": {
+    "C:\\Users\\ocana\\Documents\\Web Developement\\asp.net-getting-started\\Employees\\Employees\\Employees.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\Employees\\Employees.csproj",
+        "projectUniqueName": "C:\\Users\\ocana\\Documents\\Web Developement\\asp.net-getting-started\\Employees\\Employees\\Employees.csproj",
         "projectName": "Employees",
-        "projectPath": "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\Employees\\Employees.csproj",
+        "projectPath": "C:\\Users\\ocana\\Documents\\Web Developement\\asp.net-getting-started\\Employees\\Employees\\Employees.csproj",
         "packagesPath": "C:\\Users\\ocana\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ocana\\Documents\\asp.net-getting-started\\Employees\\Employees\\obj\\",
+        "outputPath": "C:\\Users\\ocana\\Documents\\Web Developement\\asp.net-getting-started\\Employees\\Employees\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ocana\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,25 +40,33 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
-              "version": "[3.1.8, )"
+              "version": "[3.1.9, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.8, )"
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[3.1.8, )"
+              "version": "[3.1.9, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.8, )"
+              "version": "[3.1.9, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.4, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.22, )"
             }
           },
           "imports": [
