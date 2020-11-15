@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Employees.Models;
+using Employees.Extensions;
 
 namespace Employees
 {
@@ -31,16 +32,12 @@ namespace Employees
             Conexión con el context que es el que controla la conexión a la base de datos y la asignación
             de objetos 'Employee'a los registros de la base de datos. 
             */
-
-            //MySQL
-            //services.Add(new ServiceDescriptor(typeof(EmployeeContext), new EmployeeContext(Configuration.GetConnectionString("DefaultConnection"))));
-
-            //SQL Server       
-            services.AddDbContext<EmployeeContext>(options => options.UseSqlServer(Configuration.GetConnectionString("EmployeeContext")));
-
-            //InMemory Database
-            //services.AddDbContext<EmployeeContext>(opt => opt.UseInMemoryDatabase("EmployeeList"));
             
+            //SQL Server       
+            //services.AddDbContext<EmployeeContext>(options => options.UseSqlServer(Configuration.GetConnectionString("EmployeeContext")));
+
+            services.ConfigureMySqlContext(Configuration);
+
             services.AddControllers();
         }
 
@@ -55,6 +52,7 @@ namespace Employees
 
             // Habilita la asignación de archivos predeterminada.
             app.UseDefaultFiles();
+
             // Atiende archivos estáticos.
             app.UseStaticFiles();
 

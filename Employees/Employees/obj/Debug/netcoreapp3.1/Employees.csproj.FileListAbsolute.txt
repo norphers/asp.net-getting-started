@@ -474,5 +474,3 @@ C:\Users\ocana\Documents\Web Developement\asp.net-getting-started\Employees\Empl
 C:\Users\ocana\Documents\Web Developement\asp.net-getting-started\Employees\Employees\bin\Debug\netcoreapp3.1\Renci.SshNet.dll
 C:\Users\ocana\Documents\Web Developement\asp.net-getting-started\Employees\Employees\bin\Debug\netcoreapp3.1\SshNet.Security.Cryptography.dll
 C:\Users\ocana\Documents\Web Developement\asp.net-getting-started\Employees\Employees\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
-C:\Users\ocana\Documents\Web Developement\asp.net-getting-started\Employees\Employees\obj\Debug\netcoreapp3.1\Employees.csproj.CoreCompileInputs.cache
-C:\Users\ocana\Documents\Web Developement\asp.net-getting-started\Employees\Employees\obj\Debug\netcoreapp3.1\Employees.MvcApplicationPartsAssemblyInfo.cache
